@@ -1,0 +1,64 @@
+	
+	<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+			<title>Sample Webpage</title>
+		</head>
+	
+		<body>
+			<h1>What's Your Generation?</h1>
+			
+			
+			<label>Age:</label>
+			<input type="text" id="age" name="text-sample"><br><br>
+			<button id="btn" onclick="condition()">Click Here</button>
+			<p id="para"></p>
+			<script>
+
+				
+				function inputText() {
+					/*Inputting*/
+					var celebrity = document.getElementById("celebrity").value;
+					var baranggay = document.getElementById("baranggay").value;
+					var houseItem = document.getElementById("house-item").value;
+					
+					document.getElementById("paragraph-one").innerHTML = "There once was a warrior named " + celebrity;
+					document.getElementById("paragraph-two").innerHTML = "He lived in the kingdom of " + baranggay;
+					document.getElementById("paragraph-three").innerHTML = "Wielding his powerful " + houseItem;
+				}
+			
+				function condition() {
+					var age = document.getElementById("age").value;
+					var birthYear = 2023 - age;
+					
+					if (birthYear >= 1928 && birthYear <= 1945) {
+						document.getElementById("para").innerHTML = "Silent Generation";
+					} else if (birthYear >= 1946 && birthYear <= 1964) {
+						document.getElementById("para").innerHTML = "Baby Boomer";
+					} else if (birthYear >= 1965 && birthYear <= 1980) {
+						document.getElementById("para").innerHTML = "Generation X";
+					} else if (birthYear >= 1981 && birthYear <= 1996) {
+						document.getElementById("para").innerHTML = "Millenial";
+					} else if (birthYear >= 1997 && birthYear <= 2012) {
+						document.getElementById("para").innerHTML = "Generation Z";
+					} else if (birthYear >= 2013 && birthYear <= 2025) {
+						document.getElementById("para").innerHTML = "Alpha Generation";
+					}
+					
+					
+					
+					
+				}
+			
+			</script>
+			
+			
+			
+		</body>
+		
+	</html>
+
+

@@ -1,0 +1,40 @@
+	
+	<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+			<title>Sample Webpage</title>
+		</head>
+	
+		<body>
+		
+			
+
+			
+			
+			<br><br>
+			
+			<p id="text-sample">Text Here</p>
+			<button id="btn-edit" onclick="editPage()">Click Here</button>
+			<input type="text" id="username" name="username">
+			
+			<script>
+				function editPage() {
+					
+					var userName = document.getElementById("username").value;
+					
+					document.getElementById("text-sample").innerHTML = "Hello" + userName + "!";
+					document.getElementById("text-sample").style.color = "red";
+					document.getElementById("text-sample").style.fontWeight = "bold";
+				}
+			</script>
+			
+			
+			
+		</body>
+		
+	</html>
+
+
